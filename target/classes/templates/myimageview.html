@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ArtShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/imageview.css}"
+      href="/css/imageview.css"/>
+
+<div class=" clearfix" th:object="${post}">
+    <img id="artImage" class=" materialboxed float-left" alt="art image"
+         th:src="${post.location}"/>
+    <div class="float-right card detailscard">
+        <h5 th:text="${post.art_name}"></h5>
+        <div class="clearfix">
+            <i class="small material-icons float-left">perm_identity</i>
+            <h5 th:text="${post.post.first_name}" class="float-left"></h5>
+        </div>
+        <p th:text="${post.art_description}"></p>
+        <div class="clearfix " id="dimentions">
+            <p class="float-left"> Height: </p>
+            <p class="float-left" th:text="${post.height}"></p>
+            <p class="float-left"> cm , </p>
+            <p class="float-left"> Width: </p>
+            <p class="float-left" th:text="${post.width}"></p>
+            <p class="float-left"> cm </p>
+        </div>
+        <p th:text="${post.type_of_art}"></p>
+        <p th:text="${post.other_details}"></p>
+        <div class="clearfix">
+            <h5 class="float-left">&#x20B9;</h5><h5 th:text="${post.cost}" class="float-left"></h5>
+        </div>
+
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger float-right delbtn" href="#delete-modal">Delete</a>
+
+        <!-- Modal Structure -->
+        <div id="delete-modal" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Delete the art piece ?</h4>
+                <b>Are you sure to delete the art piece from the list?</b>
+            </div>
+            <div class="modal-footer">
+                <span style="display:none;" id="artId" th:text="${post.id}"></span>
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                <a href="#!" id="deleteConfirmButton" class=" modal-action modal-close waves-effect waves-green btn-flat">Yes Confirm Delete</a>
+                <!--TODO: implement the two buttons-->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+<script src="/js/myimageview.js" th:src="@{/js/myimageview.js}"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Gallery</title>
+</head>
+<body>
+<div th:fragment="feed">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/feed.css}" href="/css/feed.css"/>
+
+    <div id="gallery">
+    <div class="cont">
+    </div>
+    </div>
+
+    <button class="btn load-btn" onclick="loadData();">Load more</button>
+    <script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}" src="/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/feed.js}" src="/js/feed.js"></script>
+
+    <br/>
+
+</div>
+
+</body>
+</html>

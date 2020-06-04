@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/registration.css}"
+          href="/css/registration.css"/>
+
+</head>
+<body>
+<!--navbar-->
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+<!--visible region-->
+
+<form th:action="@{/login}" method="get">
+    <button class="btn btn-md btn-warning btn-block orange" type="Submit">Go To Login Page</button>
+</form>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form autocomplete="off" action="#" th:action="@{/registration}"
+                  th:object="${userRegDomain}" method="post" class="form-horizontal"
+                  role="form">
+                <h3>User Registration</h3>
+                <div class="clearfix">
+                    <div class="form-group input-field my-input-field">
+                        <div class="">
+                            <i class="material-icons prefix">face</i>
+                            <input type="text" th:field="*{name}" placeholder="Name"
+                                   class=" validate"/>
+                            <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+                                   class="validation-message"></label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group input-field ">
+                    <div class="">
+                        <i class="material-icons prefix">email</i>
+
+                        <input type="email" th:field="*{email}" placeholder="Email  ( Verification mail will be sent )"
+                               class="validate"/>
+                        <label
+                                th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+                                class="validation-message"></label>
+                    </div>
+                </div>
+                <div class="form-group input-field ">
+                    <div class="">
+                        <i class="material-icons prefix">vpn_key</i>
+
+                        <input type="password" th:field="*{password}"
+                               placeholder="Password" class="validate"/>
+                        <label
+                                th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                                class="validation-message"></label>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="form-group input-field my-input-field">
+                        <div class="">
+                            <i class="material-icons prefix">person_pin_circle</i>
+                            <input type="text" th:field="*{region}" placeholder="Region"
+                                   class=" validate"/>
+                            <label th:if="${#fields.hasErrors('region')}" th:errors="*{region}"
+                                   class="validation-message"></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group input-field my-input-field">
+                        <div class="">
+                            <i class="material-icons prefix">phone_android</i>
+
+                            <input type="text" th:field="*{phone}" class="validate"
+                                   placeholder="Phone number   ( Verification OTP will be sent )"/>
+                            <label th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"
+                                   class="validation-message"></label>
+                        </div>
+                    </div>
+                    <div class="form-group input-field my-input-field">
+                        <div class="">
+                            <i class="material-icons prefix">accessibility</i>
+
+                            <input type="text" th:field="*{age}" class="validate"
+                                   placeholder="Age"/>
+                            <label th:if="${#fields.hasErrors('age')}" th:errors="*{age}"
+                                   class="validation-message"></label>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="form-group">
+                    <p>By clicking "Register" I agree to have read and understood the <a href="/terms_and_condition">terms and conditions</a> and <a href="/privacy_policy">privacy policy</a> for using this platform and I have no issues in receiving promotional emails. </p>
+                </div>
+
+                <br/>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+
+                <span th:utext="${successMessage}">  </span>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div th:include="fragments/footer :: mainfooter"></div>
+
+
+</body>
+</html>

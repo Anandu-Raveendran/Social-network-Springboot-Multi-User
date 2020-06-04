@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Artist Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/about_us.css}" href="/css/about_us.css" />
+</head>
+
+<body>
+  <div th:include="fragments/nav :: navbar"></div>
+
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="/uploadedimages/shirt1.jpg" th:src="@{/uploadedimages/shirt1.jpg}" /></div>
+  </div>
+  <div class=" container">
+    <h2>About Us</h2>
+    <br />
+    <h5> Our Mission </h5>
+    <p>Send a rocket to mars. Naa just kidding :D ArtShop.com is a platform for artists to showcase their talent to the
+      world and earn from it.
+      <br /> If you are an post, Artshop lets you find buyers for your art and if you are an art lover,
+      you get to buy from a wide range of art pieces and a wide range of artists.</p>
+    <p>We believe in a beautiful world where the post and the buyers talk to each other.
+      And the buyer buys directly from the artists.
+      Some may say that we do not like to be dragged into all the hustle of payment, storing and delivery of art. Well
+      they are right :) </p>
+    <br />
+    <h5>What we do</h5>
+    <p> Our platform is for two kinds of people. One that understands art and the other, who create them. </p>
+    <p> We let the artists showcase their art by putting a price tag on it. The post decides the rate on the tag.</p>
+    <p> If you like the work, you can buy it from the post. We let the post know that you are interested in buying
+      his work.
+      The post is informed and arranges for the payment and transportation of the art</p>
+    <p><b>Artshop.com does not handle the payment, storage and delivery of the art.</b> These are done directly between
+      the post and the buyer</p>
+    <br />
+    <h5>How we earn</h5>
+    <p>We charge the post a nominal charge for showcasing their art on our platform(Artshop.com).
+      Also, we sell ads. <b>To advertise</b> please contact our developer</p>
+
+    <br />
+    <!--<h5>The Team</h5>-->
+    <!--<div class="clearfix">-->
+    <!--<div class="float-left name-box">-->
+    <!--<p class="center"><b>Abhishek Rawat</b></p>-->
+    <!--<p class="center">rawat@gmail.com</p>-->
+    <!--</div>-->
+    <!--<div class="float-left name-box">-->
+    <!--<p class="center"><b>Anirudh KC</b></p>-->
+    <!--<p class="center">sonu@gmail.com</p>-->
+    <!--</div>-->
+    <!--<div class="float-left name-box">-->
+    <!--<p class="center"><b>Rohan Thomas</b></p>-->
+    <!--<p class="center">baby@gmail.com</p>-->
+    <!--</div>-->
+    <!--<div class="float-left name-box">-->
+    <!--<p class="center"><b>Anandu Raveendran</b></p>-->
+    <!--<p class="center">anandu.rdharn@gmail.com</p>-->
+    <!--</div>-->
+
+    <!--</div>-->
+    <!--<br/>-->
+    <!--<h5>Developed By</h5>-->
+    <!--<p><b>Anandu Raveendran</b> <br/>-->
+    <!--anandu.rdharn@gmail.com<br/>-->
+    <!--<small>  Yup! he made it all by himself. He's awesome :D</small>-->
+    <!--</p>-->
+    <h5>Privacy Policy and Terms and Condition</h5>
+    <p>Read our <a href="/terms_and_condition">terms and conditions</a> and <a href="/privacy_policy">privacy policy</a>. </p>
+    <br />
+    <hr />
+    <h5 class="center">Thank you for using ArtShop.com</h5>
+    <p class="center">
+      <small>Please send us your feedback at anandu.rdharn@gmail.com</small>
+    </p>
+    <br />
+    <br />
+  </div>
+  <div th:include="fragments/footer :: mainfooter"></div>
+  <script type="text/javascript" th:src="@{/js/about_us.js}" src="/js/about_us.js"></script>
+
+</body>
+
+</html>

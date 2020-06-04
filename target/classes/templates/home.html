@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/reset.css}" href="/css/reset.css"/>
+
+</head>
+<body>
+<div th:include="fragments/nav :: navbar"></div>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/home.css}" href="/css/home.css"/>
+<section id="home-main-section">
+
+    <div class="information-div clearfix">
+        <div class="card-panel teal waves-effect waves-light info-div-item card float-left hoverable">
+            <i class=" medium material-icons right  ">collections</i>
+            <h6 class="white-text ">Buy directly from artists around the globe</h6>
+        </div>
+        <div onclick="window.location = '/customer/order'"
+             class="card-panel cyan waves-effect waves-light info-div-item card float-left hoverable">
+            <i class=" medium material-icons right ">mode_edit</i>
+            <h6 class="white-text ">Get your painting made from our expert artists</h6>
+        </div>
+        <div onclick="window.location = '/post/new-upload'"
+             class="card-panel light-blue waves-effect waves-light info-div-item card float-left hoverable">
+            <i class="medium material-icons right ">person_add</i>
+            <h6 class="white-text ">Sell or showcase your art and start earning</h6>
+        </div>
+    </div>
+
+    <div th:include="fragments/feed :: feed"></div>
+</section>
+
+<div id=" container " class="row float_button_wrapper scale-transition show-on-medium-and-down	white">
+    <a class="col s3 waves-effect waves-light btn-flat float_button center"  th:href="@{/}" href="/">
+        <i class="material-icons float-icon ">home</i>
+        <p class="float-icon-text ">Home</p>
+    </a>
+    <a class="col s3 waves-effect waves-light btn-flat float_button center"  th:href="@{/}" href="/" >
+        <i class="material-icons float-icon ">search</i>
+        <p class="float-icon-text ">Search</p>
+    </a>
+    <a class="col s3 waves-effect waves-light btn-flat float_button center"  th:href="@{/user/new-post}" href="/user/new-upload">
+        <i class="material-icons float-icon ">add_to_photos</i>
+        <p class="float-icon-text ">New post</p>
+    </a>
+    <a class="col s3 waves-effect waves-light btn-flat float_button center"  th:href="@{/}" href="/">
+        <i class="material-icons float-icon ">account_circle</i>
+        <p class="float-icon-text ">Account</p>
+    </a>
+
+</div>
+<div th:include="fragments/footer :: mainfooter"></div>
+
+<script type="text/javascript" th:src="@{/js/home.js}" src="/js/home.js"/>
+<!--src="/bootstrap/js/popper.min.js"></script>-->
+<!--<script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}" src="/bootstrap/js/bootstrap.min.js"></script>-->
+
+</body>
+</html>

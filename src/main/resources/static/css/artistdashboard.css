@@ -1,0 +1,72 @@
+body {
+  scrollable: hidden;
+}
+
+.launcher {
+  height: 100%;
+  min-height: 850px;
+  width: 15%;
+  color: white;
+  float: left;
+  left: 0;
+}
+
+.display-area {
+  height: 100%;
+  min-height: 850px;
+  color: white;
+  width: 85%;
+  float: left;
+  left: 0;
+}
+
+.area-content {
+  float: left;
+  height: 80%;
+  min-height: 750px;
+  color: black;
+  width: 97%;
+  margin: 2%;
+  scrollable: true;
+}
+
+.area-content-heading {
+  margin: 2%;
+}
+
+.dash-list-icon {
+  margin: 4%;
+  padding: 2%;
+}
+
+.dash-list-item {
+  margin: 4%;
+  padding: 2%;
+  width: 60%;
+}
+
+.dash-title {
+  color: cyan;
+  margin: 4%;
+  margin-bottom: 10%;
+}
+
+.dash-icon {
+  color: cyan;
+  margin: 4%;
+  margin-bottom: 10%;
+}
+
+.list-item {
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .dash-title {
+    display: none;
+  }
+
+  .dash-icon {
+    margin-left: 30%;
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Artists</title>
+</head>
+<body>
+
+<!--navbar-->
+<div th:include="fragments/nav :: navbar"></div>
+<div class="container">
+    <br/><br/>
+    <h4>&nbsp;&nbsp;&nbsp;Artists List</h4>
+    <ul class="container collection">
+        <div th:include="fragments/list_of_artist_list_item :: artist_list_item"></div>
+        <div th:include="fragments/list_of_artist_list_item :: artist_list_item"></div>
+        <div th:include="fragments/list_of_artist_list_item :: artist_list_item"></div>
+        <div th:include="fragments/list_of_artist_list_item :: artist_list_item"></div>
+        <div th:include="fragments/list_of_artist_list_item :: artist_list_item"></div>
+        <div th:include="fragments/list_of_artist_list_item :: artist_list_item"></div>
+        <div th:include="fragments/list_of_artist_list_item :: artist_list_item"></div>
+        <div th:include="fragments/list_of_artist_list_item :: artist_list_item"></div>
+
+    </ul>
+    <div th:include="fragments/preloader :: preloader"></div>
+</div>
+<div th:include="fragments/footer :: mainfooter"></div>
+
+</body>
+</html>

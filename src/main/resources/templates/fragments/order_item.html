@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="order_item">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/customerorder.css}"
+          href="/css/customerorder.css"/>
+
+
+    <div class="card hoverable gallary-item">
+        <div class="card-image ">
+            <img class="activator card-img " th:src="@{/images/shirt2.jpg}"/>
+        </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title<i
+                    class="material-icons right">more_vert</i></span>
+            <p id="description">description</p>
+            <div class="clearfix">
+                <p class="float-left">Size:</p>
+                <p id="heigth" class="float-left">2343</p>
+                <p class="float-left">X</p>
+                <p id="width" class="float-left">3444</p>
+
+                <h5 class="float-right cost">2333</h5>
+                <h5 class="float-right">Cost: </h5>
+x
+            </div>
+            <div class="clearfix">
+                <button class="btn grey float-left">Sent a Text</button>
+                <button class="btn float-right">Accept</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

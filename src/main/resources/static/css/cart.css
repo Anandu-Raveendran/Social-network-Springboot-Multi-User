@@ -1,0 +1,156 @@
+html {
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: #fafafa;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+    width:97%;
+}
+
+.content{
+    margin-top:5%;
+}
+
+.artname{
+    margin-left:10px;
+    margin-right:0px;
+}
+
+.heading-div{
+  width:100%;
+  margin-bottom: 2%;
+}
+
+.cart_heading {
+  color: #333;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 1%;
+}
+
+h3 {
+  font-size: .9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#Billing{
+    padding-bottom: 20%;
+}
+
+.table-label{
+    font-size: .8rem;
+    padding:2% 0 2% 5%;
+}
+.table-info{
+    font-size: .8rem;
+    padding:2% 5% 2% 5%;
+    text-align:right;
+}
+
+
+#gallery {
+  max-width: calc(5 * 16rem);
+  min-width: 20em;
+  margin: 0 auto;
+}
+
+.pinWrapper{
+    max-height: 10%;
+
+}
+
+.item-image{
+    width: 10%;
+
+}
+
+.artTitle{
+
+}
+
+.titleContainer{
+
+}
+
+.share-button {
+  margin: 4% 6%;
+  cursor: pointer;
+}
+
+.deleted-item {
+  display: none;
+}
+
+.like-button {
+  margin: 2% 6%;
+  cursor: pointer;
+}
+
+.cost-button {
+    text-align: right;
+}
+.row{
+    margin-bottom:0px;
+}
+.collection{
+    min-height: 46px;
+    margin: 1px;
+}
+.collection .collection-item.avatar{
+    min-height: 46px;
+}
+
+#gallery {
+  padding-bottom: 10px;
+  /* Height of the footer */
+}
+
+.float_button_wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.float_button {
+  width: 50%;
+  height: 100%;
+  padding: 4% 0 4% 0;
+}
+
+.stock{
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 0 0.2rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.stock-box{
+ box-shadow: 0px 0px 0px 0.5px grey;
+ margin-left:5px;
+ float:right;
+}
+.stock-left{
+    color:red;
+
+}
+.stock-center{
+}
+.stock-right{
+    color:green;
+}
+
+.row .col{
+ padding:0px;
+}
+}

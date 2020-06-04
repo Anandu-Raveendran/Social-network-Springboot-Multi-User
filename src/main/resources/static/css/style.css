@@ -1,0 +1,39 @@
+*{
+	box-sizing: border-box;
+}
+
+.main-content{
+    height:760px;
+}
+
+.clearfix:before {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.float-left{
+    float:left;
+}
+.float-right{
+    float:right;
+}
+
+
+#sidenav-overlay {
+z-index: 1;
+}
+
+@media only screen and (min-width: 601px)
+  .container {
+    width: 95%;
+}
+@media only screen and (min-width: 993px)
+  .container {
+    width: 95%;
+}

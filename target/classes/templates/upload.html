@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!--navbar-->
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+
+<p>Upload a file</p>
+
+<form method="POST" enctype="/multipart/form-data" id="fileUploadForm">
+    <input type="text" name="extraField"/><br/><br/>
+    <input type="file" name="files"/><br/><br/>
+    <input type="file" name="files"/><br/><br/>
+    <input type="submit" value="Submit" id="btnSubmit"/>
+</form>
+
+<p>Ajax Post Result</p>
+<pre>
+    <span id="result"></span>
+</pre>
+
+
+<script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}" src="/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+
+</body>
+</html>
+
+<!--TODO: make upload as a fragment and use it in places-->

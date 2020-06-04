@@ -1,0 +1,21 @@
+.validation-message{
+    color:red;
+    text-color:red;
+}
+
+.my-input-field{
+	width: 50%;
+	float:left;
+}
+
+.inline{
+display:inline;
+   width:20%;
+}
+
+@media only screen and (max-width: 800px) {
+    .my-input-field{
+    	width: 100%;
+    	float:None;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>footer</title>
+</head>
+<body>
+<div th:fragment="mainfooter">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/footer.css}" href="/css/footer.css"/>
+
+    <!--<footer class="page-footer black" id="footer">-->
+        <!--<div class="container">-->
+            <!--TITLE.com-->
+        <!--</div>-->
+        <!--<div class="footer-copyright">-->
+            <!--<div class="container">-->
+                <!--© 2014 Copyright Text-->
+                <!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</footer>-->
+
+    <script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}" src="/jquery/jquery-3.2.1.min.js"></script>
+    <!--<script type="text/javascript" th:src="@{/materialize/materialize.js}" src="/materialize/materialize.js"></script>-->
+    <script type="text/javascript" th:src="@{/materialize/materialize.min.js}"
+            src="/materialize/materialize.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/init.js}" src="/js/init.js"></script>
+</div>
+</body>
+</html>

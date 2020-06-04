@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+  <div th:include="fragments/nav :: navbar"></div>
+  <br />
+  <div th:fragment="upload">
+    <div class="main-content clearfix container">
+      <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/customerorder.css}" href="/css/customerorder.css" />
+      <h3>Create a new post</h3>
+
+        <div class="card">
+            <div class="container">
+                <br/>
+      <form method="POST" enctype="multipart/form-data" id="fileUploadForm" accept="image/*"
+            onchange="loadFile(event)" th:object="${PostDomain}">
+
+              <span>
+                       <i class="material-icons">add_a_photo</i><h3>Add an image</h3>
+              </span>
+              <input id="files" class="inputfile" type="file" name="files" th:field="*{files}"  />
+
+          <label th:for="files" th:if="${#fields.hasErrors('files')}" th:errors="*{files}">
+              Choose an image
+          </label><br/>
+                        <img class="responsive-img" id="output"/>
+               <br/><br/>
+<!--                        <h3 class="left">Location</h3>-->
+                        <input class="right" type="text" name="location" placeholder="Add a location" th:field="*{location}"/>
+                        <label th:if="${#fields.hasErrors('location')}" th:errors="*{location}"
+                               class="validation-message">Location</label>
+<!--                        <br/>-->
+
+<!--                        <h3>Tell a story</h3>-->
+                        <input type="text" name="Add a text"
+                               placeholder="Write something" th:field="*{text}"/>
+                        <label th:if="${#fields.hasErrors('text')}" th:errors="*{text}"
+                               class="validation-message">Write something</label>
+                        <input class="btn waves-effect waves-light " type="submit" value="Upload"
+                           id="btnSubmit"/>
+        </form>
+            <br/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+<script type="text/javascript" th:src="@{/js/upload.js}" src="/js/upload.js"></script>
+
+</body>
+</html>

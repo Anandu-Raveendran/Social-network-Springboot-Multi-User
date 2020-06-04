@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div th:include="fragments/nav :: navbar"></div>
+<div class="content container" >
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/cart.css}" href="/css/cart.css"/>
+
+    <div class="heading-div ">
+        <a class="waves-effect waves-light  btn-flat cart_heading"><i class="material-icons right">shopping_cart</i>My Cart</a>
+    </div>
+        <div style="display:none" class="center" id="empty-cart-msg">
+            <h4  class="center" style="color:grey;" >Your cart is empty</h4>
+        </div>
+    <div id="gallery" >
+    </div>
+<!--    <button id="load-more-btn" class="btn load-btn" onclick="loadData();">Load more</button>-->
+    <div id="Billing" >
+        <div class="card ">
+            <table class="billing-table">
+                <thead>
+                <tr> <th class="table-label">Billing info</th> </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th class="table-label">Item total</th>
+                    <th id="total" class="table-info">10</th>
+                </tr>
+                <tr>
+                    <th class="table-label">Delivery Charges</th>
+                    <th id="delivery" class="table-info">0</th>
+                </tr>
+                <tr>
+                    <th class="table-label">Taxes</th>
+                    <th id="taxes" class="table-info">0</th>
+                </tr>
+
+                <tr class="card-action">
+                    <th class="table-label">To Pay</th>
+                    <th id="topay" class="table-info">300</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <br/>
+
+</div>
+<div id=" container " class="row float_button_wrapper scale-transition show-on-medium-and-down	white">
+    <a class="col s6 waves-effect waves-light btn-flat center grey float_button"  onclick="clear_cart()">
+        <i class="material-icons">delete</i>Clear cart
+    </a>
+    <a class="col s6 waves-effect waves-light btn-flat center green float_button"  th:href="@{/delivery_address}" href="/delivery_address" >
+        <i class="material-icons">check</i>Checkout
+    </a>
+</div>
+
+    <script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}" src="/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/cart.js}" src="/js/cart.js"></script>
+    <div th:include="fragments/footer :: mainfooter"></div>
+
+    </body>
+    </html>

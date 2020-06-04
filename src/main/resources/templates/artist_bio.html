@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Artist Bio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div th:include="fragments/nav :: navbar"></div>
+  <br />
+  <div class="container" th:object="${post}">
+    <div th:fragment="profile">
+      <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/artistbio.css}" href="/css/artistbio.css" />
+
+      <!-- profile pic and name-->
+      <div class="clearfix">
+        <div class="profile-pic float-left"><img th:src="@{/images/shirt1.jpg}" /></div>
+        <div class="float-left profile-name ">
+          <h5 th:text="${post.first_name}">Abhishek singh rawat</h5>
+        </div>
+      </div>
+      <!--descripti   on-->
+      <div class="card blue-grey black">
+        <div class="card-content white-text">
+          <span class="card-title">About Me</span>
+          <p>I am a very simple card. I am good a</p>
+        </div>
+      </div>
+
+      <!--Gallery-->
+      <div th:include="fragments/gallary :: gallary"></div>
+    </div>
+  </div>
+  <div th:include="fragments/footer :: mainfooter"></div>
+</body>
+
+</html>

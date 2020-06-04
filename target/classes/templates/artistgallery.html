@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div th:include="fragments/nav :: navbar"></div>
+<div>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/artistgallary.css}" href="/css/artistgallary.css"/>
+
+    <h1>My Art Gallery</h1>
+        <div style="display:none" class="center" id="empty-gallery-msg">
+            <h4  class="center" style="color:grey;" >You have not uploaded any images</h4>
+        </div>
+    <div id="gallery">
+    </div>
+    <button id="load-more-btn" class="btn load-btn" onclick="loadData();">Load more</button>
+    <script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}" src="/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/artistgallary.js}" src="/js/artistgallary.js"></script>
+
+    <br/>
+
+</div>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+
+</body>
+</html>

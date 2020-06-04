@@ -1,0 +1,95 @@
+html {
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: #fafafa;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container{
+    width:97%;
+}
+
+.content{
+    margin-top:1%;
+}
+
+
+.heading-div{
+  width:100%;
+  margin-bottom: 2%;
+}
+
+.cart_heading {
+  color: #333;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 1%;
+}
+
+h3 {
+  font-size: .9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.float_button_wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.float_button {
+  width: 50%;
+  height: 100%;
+  padding: 4% 0 4% 0;
+}
+
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400px;
+        width: 100%;
+        margin: 0 auto 10px auto;
+      }
+      @media screen and (max-width:30em) {
+        #map {
+        height: 270px;
+
+        }
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .location-btn{
+        padding:5px;
+        margin-right: 2%;
+      }
+
+      #location_textbox{
+        margin-top:2%;
+        width:100%;
+      }
+      #location_textbox:hover{
+      }
+      #location_formated{
+      }
+
+      .address_text{
+        margin-left: 2rem
+      }
+
+      .container .row{
+        width:100%;
+      }

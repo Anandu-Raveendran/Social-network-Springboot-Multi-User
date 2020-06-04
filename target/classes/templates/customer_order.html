@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/customerorder.css}"
+          href="/css/customerorder.css"/>
+</head>
+<body>
+<div th:fragment="gallary">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/gallary.css}" href="/css/gallary.css"/>
+
+
+    <h1>Art Gallery</h1>
+    <div id="gallery">
+        <div class="cont">
+        </div>
+    </div>
+
+    <button class="btn load-btn" onclick="loadData();">Load more</button>
+    <script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}" src="/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/customerupload.js}" src="/js/customerupload.js"></script>
+    <script type="text/javascript" th:src="@{/js/customer_order.js}" src="/js/customer_order.js"></script>
+
+    <br/>
+
+</div>
+
+</body>
+</html>

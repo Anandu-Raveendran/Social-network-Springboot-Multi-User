@@ -1,0 +1,24 @@
+.order-item {
+  width: 100%;
+}
+
+.order-image-box {
+  background: red;
+  width: 34%;
+}
+
+.order-action-box {
+  background: blue;
+  width: 33%;
+}
+
+.order-info-box {
+  background: gray;
+  width: 33%;
+}
+
+.gallary-item {
+  width: 350px;
+  float: left;
+  margin: 7px;
+}

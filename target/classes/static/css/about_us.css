@@ -1,0 +1,13 @@
+h5 {
+  color: grey;
+}
+
+.name-box {
+  width: 25%;
+}
+
+@media only screen and (max-width: 560px) {
+  .name-box {
+    width: 50%;
+  }
+}

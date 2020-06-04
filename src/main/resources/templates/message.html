@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Message</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/registration.css}"
+          href="/css/registration.css"/>
+
+</head>
+<body>
+<!--navbar-->
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+<!--visible region-->
+
+<form th:action="@{/home}" method="get">
+    <button class="btn btn-md btn-warning btn-block orange" type="Submit">Go To Home Page</button>
+</form>
+<div class="valign-wrapper">
+    <div class="container center-align">
+        <br/>
+        <br/>
+        <h6 th:if="${messagePageDomain.errorCode}"
+            class="center-align" th:text="${messagePageDomain.errorCode}"></h6>
+        <h5 class="center-align" th:text="${messagePageDomain.message}"></h5>
+        <br/>
+        <form class="center-align" th:action="@{${messagePageDomain.redirecturl}}    " method="get">
+            <button class="center-align btn blue" type="Submit" th:text="${messagePageDomain.buttonString}"></button>
+        </form>
+        <br/>
+    </div>
+</div>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+
+
+</body>
+</html>

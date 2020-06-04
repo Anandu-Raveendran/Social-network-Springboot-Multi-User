@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/artistreg.css}"
+          href="/css/artistreg.css"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/mdb.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/complete_reg.css}" rel="stylesheet"/>
+
+</head>
+<body class="" id="top">
+<!--navbar-->
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+<!--visible region-->
+<div class="main-content">
+
+    <div id="content">
+        <section class="text-center py-5 grey lighten-4" id="about">
+            <div class="container">
+                <div class="wow fadeIn">
+                    <h2 class="h1 pt-5 pb-3">Welcome to Artshop</h2>
+                    <p class="px-5 mb-5 pb-3 lead blue-grey-text">
+                        Congratulations on joining artshop. We are excited to have you. Let us guide you through some
+                        stuff.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".3s"><i
+                            class="fa fa-dashboard fa-3x orange-text"></i>
+                        <h3 class="h4 mt-3">Artist</h3>
+                        <p class="mt-3 blue-grey-text">
+                            Artist uploads his art to showcase his art piece and delivers the art to the buyer.
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".4s"><i
+                            class="fa fa-comments-o fa-3x cyan-text"></i>
+                        <h3 class="h4 mt-3">what we do</h3>
+                        <p class="mt-3 blue-grey-text">
+                            When a buyer likes an art piece. We let the post know.
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i
+                            class="fa fa-cubes fa-3x red-text"></i>
+                        <h3 class="h4 mt-3">Buyer</h3>
+                        <p class="mt-3 blue-grey-text">
+                            Buyer will put an order if he likes an art. We let him contact the respective post.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" id="projects">
+            <div class="container">
+                <div class="wow fadeIn">
+                    <h3 class="text-center h1 my-4">What you should do</h3>
+                    <p class="px-5 mb-5 pb-3 lead blue-grey-text text-center">
+                        These are a few things to keep in mind
+                    </p>
+                </div>
+                <hr/>
+                <div class="row wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="col-lg-6 col-xl-5 pr-lg-5 pb-5"><img class="img-fluid rounded z-depth-2"
+                                                                     src="/images/kuala-lumpur.jpg"
+                                                                     alt="project image"/></div>
+                    <div class="col-lg-6 col-xl-7 pl-lg-5 pb-4">
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-book fa-2x cyan-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Upload pictures</h5>
+                                <p class="grey-text">
+                                    Upload good quality images on to the gallery.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-code fa-2x red-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Add the details of the art</h5>
+                                <p class="grey-text">
+                                    Be specific. Take the time to fill the accurate details for the art.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 mr-1"><i class="fa fa-money fa-2x deep-purple-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Set the price right</h5>
+                                <p class="grey-text">
+                                    Set the price of the images reasonably. Buyers might back off if its too costly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row pt-5 wow fadeInRight" data-wow-delay=".3s">
+                    <div class="col-lg-6 col-xl-7 mb-3">
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-bar-chart fa-2x indigo-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Buyer calls</h5>
+                                <p class="grey-text">
+                                    Talk to the buyer interested to buy the art about the date, delivery and payment.
+                                    Artshop is not liable
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-music fa-2x pink-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Packaging</h5>
+                                <p class="grey-text">
+                                    Package the Art appropriately. Any damage and the buyer can reject your Art. Artshop
+                                    is not liable.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-smile-o fa-2x blue-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Communication is key</h5>
+                                <p class="grey-text">
+                                    Artshop is not liable for packaging and delivery hence we insist you to communicate
+                                    well with buyers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-5 mb-3"><img class="img-fluid rounded z-depth-2"
+                                                             src="/images/san-francisco.jpg" alt="project image"/></div>
+                </div>
+                <hr/>
+                <div class="row wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="col-lg-6 col-xl-5 pr-lg-5 pb-5"><img class="img-fluid rounded z-depth-2"
+                                                                     src="/images/kuala-lumpur.jpg"
+                                                                     alt="project image"/></div>
+                    <div class="col-lg-6 col-xl-7 pl-lg-5 pb-4">
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-book fa-2x cyan-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Deliver the Art</h5>
+                                <p class="grey-text">
+                                    We do not take care of the delivery of the Art. It would be on your end. Talk to the
+                                    buyer for delivery location, etc.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-code fa-2x red-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Make sure the Buyer is happy</h5>
+                                <p class="grey-text">
+                                    Make sure the Art delivered has no defects and is as expected. The buyer has the
+                                    right to reject if so.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 mr-1"><i class="fa fa-money fa-2x deep-purple-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Payment</h5>
+                                <p class="grey-text">
+                                    The payment shall be done by the buyer directly to the post. Artshop is not
+                                    involved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="text-center py-5 indigo darken-1 text-white" id="pricing">
+            <div class="container">
+                <div class="wow fadeIn">
+                    <h2 class="h1 pt-5 pb-3">Our pricing plans</h2>
+                    <p class="px-5 mb-5 pb-3 lead">
+                        We charge a small subscription fee for hosting your art pieces on our platform
+                    </p>
+                </div>
+                <div class="row wow zoomIn">
+                    <div class="col-lg-4 col-md-12 mb-r">
+                        <div class="card card-image">
+                            <div class="text-white text-center pricing-card d-flex align-items-center rgba-stylish-strong py-3 px-3 rounded">
+                                <div class="card-body">
+                                    <div class="h5">Free Joining</div>
+                                    <div class="py-5"><sup class="display-4"></sup><span
+                                            class="display-1">FREE</span><span class="display-4"></span></div>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <p><strong>1</strong> month</p>
+                                        </li>
+                                        <li>
+                                            <p><br/></p>
+                                        </li>
+                                        <li>
+                                            <p>Applied</p>
+                                        </li>
+                                        <li>
+                                            <p>Your first month is on us</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-r">
+                        <div class="card card-image">
+                            <div class="text-white text-center pricing-card d-flex align-items-center rgba-teal-strong py-3 px-3 rounded">
+                                <div class="card-body">
+                                    <div class="h5">initial</div>
+                                    <div class="py-5"><sup class="display-4">$</sup><span
+                                            class="display-1">100</span><span class="display-4">/m</span></div>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <p><strong>2</strong> months</p>
+                                        </li>
+                                        <li>
+                                            <p><br/></p>
+                                        </li>
+                                        <li>
+                                            <p><br/></p>
+                                        </li>
+                                        <li>
+                                            <p>Basic package</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-r">
+                        <div class="card card-image">
+                            <div class="text-white text-center pricing-card d-flex align-items-center rgba-red-strong py-3 px-3 rounded">
+                                <div class="card-body">
+                                    <div class="h5">Premium</div>
+                                    <div class="py-5"><sup class="display-4">$</sup><span
+                                            class="display-1">450</span><span class="display-4">/m</span></div>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <p><strong>1 Year</strong></p>
+                                        </li>
+                                        <li>
+                                            <p><br/></p>
+                                        </li>
+                                        <li>
+                                            <p><br/></p>
+                                        </li>
+                                        <li>
+                                            <p>Premium package</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br/>
+        <section class="py-5" id="team">
+            <div class="container">
+                <div class="wow fadeIn">
+                    <p class="text-center blue-grey-text"><b>We have send a verification code to your email id.</b></p>
+                    <p class="text-center blue-grey-text"><b>Please click the link provided in the mail to continue.</b></p>
+                    <p class="text-center blue-grey-text">
+                        That's about it. Welcome to the family. We wish you all the best.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--<div class="container center">-->
+            <!--<a class="btn center wave" href="/post/dashboard">Continue to Artist Dashboard</a>-->
+        <!--</div>-->
+        <section>
+            <br/>
+            <br/>
+            <hr/>
+            <h5 class="center">Thank you for using ArtShop.com</h5>
+            <p class="center">
+                <b>Please send us your feedback at anandu.rdharn@gmail.com</b>
+            </p>
+            <br/>
+            <br/>
+        </section>
+    </div>
+</div>
+    <!--footer-->
+    <div th:include="fragments/footer :: mainfooter"></div>
+    <script type="text/javascript" th:src="@{/jquery/popper.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/jquery/mdb.min.js}"></script>
+    <script>new WOW().init();</script>
+
+<!--TODO: change the images-->
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>footer</title>
+
+</head>
+<body>
+<div th:fragment="navbar">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="theme-color" content="#000000"/>
+
+    <!--<link rel="stylesheet" type="text/css" media="all" th:href="@{/materialize/materialize.css}"-->
+    <!--href="/materialize/materialize.css"/>-->
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/materialize/materialize.min.css}"
+          href="/materialize/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/nav.css}" href="/css/nav.css"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"
+          href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar-fixed ">
+            <nav>
+                <div class="z-depth-4  amber darken-4 nav-wrapper">
+                    <div>
+                        <a href="/" class="brand-logo"><i class="small material-icons">store</i>TITLE</a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse">
+                            <i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="/">Home</a></li>
+                            <li class="dashboard-li" style="display:none;">
+                                <a href="/post/gallery    ">Artist Gallery</a>
+                            </li>
+                            <li class="upload-li" style="display:none;">
+                                <a href="/user/new-upload">+ New Post</a>
+                            </li>
+                            <li class="placeOrder-li" style="display:none;">
+                                <a href="/customer/order">Place Order</a>
+                            </li>
+                            <li class="Orders-li" style="display:none;">
+                                <a href="/post/orders">Orders</a>
+                            </li>
+                            <li class="join-li">
+                                <a href="/registration" th:unless="${#httpServletRequest.remoteUser}">Join Us</a>
+                            </li>
+                            <li class="about-li">
+                                <a href="/about">About Us</a>
+                            </li>
+                            <li class="cart-li">
+                                <a href="/cart">Cart</a>
+                            </li>
+
+                            <li class="login-li" th:if="${#httpServletRequest.remoteUser}">
+                                <a class="dropdown-button" href="#" data-activates='dropdown1'
+                                   th:href="@{/logout}" th:inline="text">
+                                    [[${#httpServletRequest.remoteUser}]]
+                                    <i class="material-icons right">account_circle</i>
+                                </a>
+                            </li>
+                            <li th:unless="${#httpServletRequest.remoteUser}">
+                                <a
+                                        th:href="@{/login}" href="#" th:inline="text">
+                                    Login
+                                    <i class="material-icons right">account_circle</i>
+                                </a>
+
+                            </li>
+
+                            <!--Dropdown Structure-->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li>
+                                    <a href="/login" th:inline="text" th:unless="${#httpServletRequest.remoteUser}">
+                                        Login
+                                    </a>
+                                    <a th:href="@{/logout}" th:inline="text" th:if="${#httpServletRequest.remoteUser}">
+                                        Logout
+                                    </a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/change-password}" th:inline="text"
+                                       th:if="${#httpServletRequest.remoteUser}">
+                                        Change password
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </ul>
+
+                        <ul class="side-nav" id="mobile-demo">
+                            <br/>
+                            <li>
+                                <a href="/login"><i class="small material-icons">account_circle</i>
+                                    <p th:inline="text" th:if="${#httpServletRequest.remoteUser}">
+                                        [[${#httpServletRequest.remoteUser}]]</p>
+                                    <p th:inline="text" th:unless="${#httpServletRequest.remoteUser}">Login</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/home">Home</a>
+                            </li>
+                            <li class="dashboard-li" style="display:none;">
+                                <a href="/post/gallery">Artist Gallery</a>
+                            </li>
+                            <li class="upload-li" style="display:none;">
+                                <a href="/user/new-upload">+ New Post</a>
+                            </li>
+                            <li class="placeOrder-li" style="display:none;">
+                                <a href="/customer/order">Place order</a>
+                            </li>
+                            <li class="Orders-li" style="display:none;">
+                                <a href="/post/orders">Orders</a>
+                            </li>
+                            <li class="cart-li" style="display:none;">
+                                <a href="/cart">Cart</a>
+                            </li>
+
+                            <li class="password-li">
+                                <a th:href="@{/change-password}" th:inline="text"
+                                   th:if="${#httpServletRequest.remoteUser}">
+                                    Change password
+                                </a>
+                            </li>
+                            <li class="join-li">
+                                <a href="/registration" th:unless="${#httpServletRequest.remoteUser}">
+                                    Join Us
+                                </a>
+                            </li>
+                            <li class="about-li"><a href="/about">About Us</a></li>
+                            <li class="login-li">
+                                <a href="/login" th:inline="text" th:unless="${#httpServletRequest.remoteUser}">
+                                    Login
+                                </a>
+                                <a th:href="@{/logout}" th:inline="text" th:if="${#httpServletRequest.remoteUser}">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--<script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}" src="/jquery/jquery-3.2.1.min.js"></script>-->
+    <script type="text/javascript" th:src="@{/js/nav.js}" src="/js/nav.js"></script>
+
+</div>
+
+</body>
+</html>

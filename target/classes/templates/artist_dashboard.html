@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Artist Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/artistdashboard.css}" href="/css/artistdashboard.css" />
+</head>
+
+<body>
+  <div th:include="fragments/nav :: navbar"></div>
+
+  <div class="main-content clearfix black" th:object="${page}">
+    <!--left side-->
+    <section class="launcher grey darken-4">
+      <br />
+      <!--heading-->
+      <div class="clearfix">
+        <i class=" material-icons dash-icon float-left ">dashboard</i>
+        <h5 class=" dash-title float-left ">Dashboard</h5>
+      </div>
+
+      <ul>
+        <li class="list-item black clearfix">
+          <a href="/post/dashboard?page=gallery">
+            <i class=" material-icons float-left dash-list-icon">wallpaper</i>
+            <p class=" float-left dash-list-item">My Gallery</p>
+
+          </a>
+        </li>
+        <li class="list-item black clearfix">
+          <a href="/post/dashboard?page=upload">
+            <i class=" material-icons float-left dash-list-icon">timer</i>
+            <p class=" float-left dash-list-item">Upload art</p>
+
+          </a>
+        </li>
+        <li class="list-item black clearfix">
+          <a href="/post/dashboard?page=payment">
+            <i class=" material-icons float-left dash-list-icon">account_box</i>
+            <p class=" float-left dash-list-item">Payment</p>
+
+          </a>
+        </li>
+        <!--<li class="list-item black clearfix">-->
+        <!--<a href="/post/dashboard?page=statistics">-->
+        <!--<i class=" material-icons float-left dash-list-icon">timeline</i>-->
+        <!--<p class=" float-left dash-list-item">Statistics</p>-->
+
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="list-item black clearfix">-->
+        <!--<a href="/post/dashboard?page=orders">-->
+        <!--<i class=" material-icons float-left dash-list-icon">view_list</i>-->
+        <!--<p class=" float-left dash-list-item">Orders</p>-->
+        <!--</a>-->
+        <!--</li>-->
+      </ul>
+    </section>
+
+    <!-- right side-->
+    <section class="display-area black">
+      <div class="area-content-heading" th:switch="${page}">
+        <div th:case="gallery">
+          <h3>Gallery</h3>
+        </div>
+        <div th:case="payment">
+          <h3>Payment</h3>
+        </div>
+        <!--<div th:case="statistics">-->
+        <!--<h3>Statistics</h3>-->
+        <!--</div>-->
+        <div th:case="upload">
+          <h3>Upload</h3>
+        </div>
+        <!--<div th:case="orders">-->
+        <!--<h3>Orders</h3>-->
+        <!--</div>-->
+      </div>
+      <div class="area-content white" th:switch="${page}">
+        <div th:case="gallery">
+          <div th:include="fragments/artistgallary :: artistgallary"></div>
+        </div>
+        <div th:case="upload">
+          <script type="text/javascript">
+            window.location = "/post/new-upload";
+          </script>
+        </div>
+        <div th:case="payment">
+          <div th:include="artist_bio :: profile"></div>
+        </div>
+        <!--<div th:case="profile">-->
+        <!--<div th:include="artist_bio :: profile"></div>-->
+        <!--</div>-->
+        <!--<div th:case="statistics">-->
+        <!--<div th:include="fragments/chart :: chart"></div>-->
+        <!--</div>-->
+        <!--<div th:case="orders">-->
+        <!--<div th:include="fragments/gallary :: gallary"></div>-->
+        <!--</div>-->
+      </div>
+    </section>
+  </div>
+  <div th:include="fragments/footer :: mainfooter"></div>
+</body>
+
+</html>

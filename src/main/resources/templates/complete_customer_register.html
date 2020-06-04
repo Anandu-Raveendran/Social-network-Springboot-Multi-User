@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Welcome</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/customerreg.css}"
+              href="/css/customerreg.css"/>
+        <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/mdb.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/complete_reg.css}" rel="stylesheet"/>
+
+    </head>
+<body class="" id="top">
+<!--navbar-->
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+<!--visible region-->
+<div class="main-content">
+
+    <div id="content">
+        <section class="text-center py-5 grey lighten-4" id="about">
+            <div class="container">
+                <div class="wow fadeIn">
+                    <h2 class="h1 pt-5 pb-3">Welcome to Artshop</h2>
+                    <p class="px-5 mb-5 pb-3 lead blue-grey-text">
+                        Congratulations on joining artshop. We are excited to have you. Let us guide you through some
+                        stuff.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" id="projects">
+            <div class="container">
+                <div class="wow fadeIn">
+                    <h3 class="text-center h1 my-4">What we do</h3>
+                    <p class="px-5 mb-5 pb-3 lead blue-grey-text text-center">
+                        These are a few things to keep in mind
+                    </p>
+                </div>
+                <hr/>
+                <div class="row wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="col-lg-6 col-xl-5 pr-lg-5 pb-5"><img class="img-fluid rounded z-depth-2"
+                                                                     src="/images/kuala-lumpur.jpg"
+                                                                     alt="project image"/></div>
+                    <div class="col-lg-6 col-xl-7 pl-lg-5 pb-4">
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-book fa-2x cyan-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Artist Uploads pictures</h5>
+                                <p class="grey-text">
+                                    Artists will upload the pics of their art
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-code fa-2x red-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Along with details</h5>
+                                <p class="grey-text">
+                                    The details of the art will be provided
+                                </p>
+                            </div>
+                        </div>
+                        <!--<div class="row">-->
+                            <!--<div class="col-1 mr-1"><i class="fa fa-money fa-2x deep-purple-text"></i></div>-->
+                            <!--<div class="col-10">-->
+                                <!--<h5 class="font-bold">Set the price right</h5>-->
+                                <!--<p class="grey-text">-->
+                                    <!--Set the price of the images reasonably. Buyers might back off if its too costly.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <hr/>
+                <div class="row pt-5 wow fadeInRight" data-wow-delay=".3s">
+                    <div class="col-lg-6 col-xl-7 mb-3">
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-bar-chart fa-2x indigo-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Buyer orders</h5>
+                                <p class="grey-text">
+                                    If you like an art piece. We will let the post know.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-music fa-2x pink-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Call the Artist </h5>
+                                <p class="grey-text">
+                                    The post should contact you regarding your order. In any case you can also contact the post
+                                </p>
+                            </div>
+                        </div>
+                        <!--<div class="row mb-3">-->
+                            <!--<div class="col-1 mr-1"><i class="fa fa-smile-o fa-2x blue-text"></i></div>-->
+                            <!--<div class="col-10">-->
+                                <!--<h5 class="font-bold">Communication is key</h5>-->
+                                <!--<p class="grey-text">-->
+                                    <!--Artshop is not liable for packaging and delivery hence we insist you to communicate-->
+                                    <!--well with buyers.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="col-lg-6 col-xl-5 mb-3"><img class="img-fluid rounded z-depth-2"
+                                                             src="/images/san-francisco.jpg" alt="project image"/></div>
+                </div>
+                <hr/>
+                <div class="row wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="col-lg-6 col-xl-5 pr-lg-5 pb-5"><img class="img-fluid rounded z-depth-2"
+                                                                     src="/images/kuala-lumpur.jpg"
+                                                                     alt="project image"/></div>
+                    <div class="col-lg-6 col-xl-7 pl-lg-5 pb-4">
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-book fa-2x cyan-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Artist delivers the Art</h5>
+                                <p class="grey-text">
+                                    Artshop do not handle packaging and delivery of the Art. It would be on artists end.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 mr-1"><i class="fa fa-code fa-2x red-text"></i></div>
+                            <div class="col-10">
+                                <h5 class="font-bold">Make the Payment</h5>
+                                <p class="grey-text">
+                                    Make the payment directly to post, once the art is delivered to you.
+                                </p>
+                            </div>
+                        </div>
+                        <!--<div class="row">-->
+                            <!--<div class="col-1 mr-1"><i class="fa fa-money fa-2x deep-purple-text"></i></div>-->
+                            <!--<div class="col-10">-->
+                                <!--<h5 class="font-bold">Payment</h5>-->
+                                <!--<p class="grey-text">-->
+                                    <!--The payment shall be done by the buyer directly to the post. Artshop is not-->
+                                    <!--involved.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <br/>
+        <section class="py-5" id="team">
+            <div class="container">
+                <div class="wow fadeIn">
+                    <p class="text-center blue-grey-text"><b>We have send a verification code to your email id.</b></p>
+                    <p class="text-center blue-grey-text"><b>Please click the link provided in the mail to continue.</b></p>
+                    <p class="text-center blue-grey-text">
+                        That's about it. Welcome to the family. We wish you all the best.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="container center">
+            <a class="btn center wave" th:href="@{/}">GO to Gallery</a>
+        </div>
+        <section>
+            <br/>
+            <br/>
+            <hr/>
+            <h5 class="center">Thank you for using ArtShop.com</h5>
+            <p class="center">
+                <b>Please send us your feedback at anandu.rdharn@gmail.com</b>
+            </p>
+            <br/>
+            <br/>
+        </section>
+    </div>
+</div>
+<!--footer-->
+<div th:include="fragments/footer :: mainfooter"></div>
+<script type="text/javascript" th:src="@{/jquery/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/jquery/mdb.min.js}"></script>
+<script>new WOW().init();</script>
+
+ <!--TODO: change the images-->
+</body>
+</html>

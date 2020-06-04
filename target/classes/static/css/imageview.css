@@ -1,0 +1,36 @@
+#artImage{
+ width:40%;
+ margin-left:5%;
+ min-width:300px;
+}
+.detailscard{
+ width:40%;
+ padding:1% 2% 0 2%;
+ margin-left: 1%;
+ margin-right:10%;
+ min-width:300px;
+}
+
+.material-icons{
+/*margin:.82rem .82rem .656rem 0;*/
+}
+#dimentions p{
+    margin-right : .2rem;
+}
+.buybtn{
+    margin-bottom:1%;
+  border-bottom: 1px solid #d9d9d9;
+}
+@media only screen and (max-width: 730px) {
+.detailscard{
+ margin-left: 3%;
+ margin-right: 3%;
+    float:left;
+    width:95%;
+}
+#artImage{
+width:95%;
+ margin-left:3%;
+ margin-right:3%;
+}
+}

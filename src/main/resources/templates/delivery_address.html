@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div th:include="fragments/nav :: navbar"></div>
+
+<div class="content container" >
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/delivery_add.css}" href="/css/delivery_add.css"/>
+
+    <div class="heading-div ">
+        <a class="waves-effect waves-light  btn-flat cart_heading"><i class="material-icons right">location_on</i>Delivery Address</a>
+    </div>
+
+</div>
+
+<div class="container" >
+    <div id="map" class="container card center"></div>
+    <div class="card" >
+<!--        Show the area name as title-->
+        <b id="location_textbox" class="waves-effect waves-light btn-flat " onclick="geocodePosition();">
+            <i class="material-icons left">location_on</i>Get Pin Address </b>
+        <form class="row">
+            <div class="address_text">
+                <div class="input-field col s11 " >
+                    <input id="location_formated" type="text" value="Address" > </input>
+                </div>
+                <div class="input-field col s11 " >
+                    <input id="house" type="text" > </input>
+                    <label for="house">House/Flat/Block No</label>
+                </div>
+                <div class="input-field col s11" >
+                    <input id="landmark" type="text" > </input>
+                    <label for="landmark">Landmark</label>
+                </div>
+                <div class="input-field col s7" >
+                    <input id="label" type="text" value="Home"> </input>
+                    <label for="label">Label this address as</label>
+                </div>
+
+             </div>
+        </form>
+    </div>
+</div>
+
+
+<script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}" src="/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" th:src="@{/js/delivery_add.js}" src="/js/delivery_add.js"></script>
+<script th:inline="javascript" async="async" defer="defer"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5cDPlk25OSb4JObkK0Wj_HZjATapyR-I&amp;callback=initMap"></script>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+
+</body>
+</html>

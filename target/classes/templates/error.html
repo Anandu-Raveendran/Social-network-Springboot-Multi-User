@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Artshop Error</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/registration.css}"
+          href="/css/registration.css"/>
+
+</head>
+<body>
+<!--navbar-->
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+<!--visible region-->
+
+<form th:action="@{/home}" method="get">
+    <button class="btn btn-md btn-warning btn-block orange" type="Submit">Go To Home Page</button>
+</form>
+<div class="valign-wrapper">
+    <div class="container center-align">
+        <br/>
+        <h4 class="center-align">Oops! Something went wrong!</h4>
+        <br/>
+        <h6 class="center-align blue-text" th:text="${status + ' ' + error}"></h6>
+        <h5 class="center-align grey-text" th:text="${message}"></h5>
+        <br/>
+        <br/>
+        <form class="center-align" th:action="@{/home}" method="get">
+            <button class="center-align btn blue" type="Submit">Okay !</button>
+        </form>
+        <br/>
+    </div>
+</div>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+
+
+</body>
+</html>

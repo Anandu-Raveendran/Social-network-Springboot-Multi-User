@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>chart</title>
+</head>
+<body>
+<div th:fragment="chart">
+    <br/>
+    <canvas id="viewsGraph" width="10" height="4"></canvas>
+    <script type="text/javascript" src="/js/Chart.min.js" th:src="@{/js/Chart.min.js}"></script>
+    <script type="text/javascript" src="/js/chart.js" th:src="@{/js/chart.js}"></script>
+</div>
+</body>
+</html>

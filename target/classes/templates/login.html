@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Login form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/artistreg.css}"
+          href="/css/artistreg.css"/>
+
+</head>
+<body>
+<!--navbar-->
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+<!--visible region-->
+
+<div>
+    <main>
+        <center>
+
+            <h5 class="orange-text">Please, login into your account</h5>
+            <div class="section"></div>
+
+            <div>
+
+                <div class="z-depth-5 grey lighten-4 row"
+                     style="display: inline-block; padding: 32px 35px 0px 35px; border: 1px solid #EEE;">
+                    <i class="large material-icons">account_circle</i>
+
+                    <div th:if="${param.error}">
+                        Invalid email Id and password.
+                    </div>
+                    <div th:if="${param.logout}">
+                        You have been logged out.
+                    </div>
+                    <br/>
+                    <form class="col s12" th:action="@{/login}" method="post">
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='email' name="username" id="username"/>
+                                <label for='username'>Enter your email</label>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='password' name='password' id='password'/>
+                                <label for='password'>Enter your password</label>
+                            </div>
+                            <label style='float: right;'>
+                                <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+                            </label>
+                        </div>
+
+                        <br/>
+                        <center>
+                            <div class='row'>
+                                <button type='submit' name='btn_login'
+                                        class='col s12 btn btn-large waves-effect orange'>Login
+                                </button>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+
+            <a href="/registration">Create account</a>
+        </center>
+
+        <div class="section"></div>
+        <div class="section"></div>
+    </main>
+</div>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+
+</body>
+</html>

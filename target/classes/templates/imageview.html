@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ArtShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div th:include="fragments/nav :: navbar"></div>
+<br/>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/imageview.css}"
+      href="/css/imageview.css"/>
+
+<div class=" clearfix" th:object="${post}">
+    <img id="artImage" class=" materialboxed float-left" alt="art image"
+         th:src="${post.img_location}"/>
+    <div class="float-right card detailscard">
+        <h5 th:text="${post.post_title}"></h5>
+        <div class="clearfix">
+            <i class="small material-icons float-left">perm_identity</i>
+<!--            <h5 th:text="${post.post.first_name}" class="float-left"></h5>-->
+        </div>
+        <p th:text="${post.post_text}"></p>
+        <p th:text="${post.likes_count}"></p>
+        <p th:text="${post.created_on}"></p>
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger float-right buybtn" href="#buy-modal">Buy from Artist</a>
+
+        <!-- Modal Structure -->
+        <div id="buy-modal" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Confirm Order.</h4>
+                <b>Inform the post that you are interested in buying this art piece.</b>
+                <hr/>
+                <br/><b>Please contact the post</b><br/><br/>
+<!--                <b>Name : </b> <a th:text="${post.post.first_name}"></a><br/>-->
+<!--                <b>Phone: </b><a th:text="${post.post.phone}"></a><br/>-->
+<!--                <b>Email : </b><a th:text="${post.post.email}"></a><br/>-->
+                <br/>
+                <br/>
+                <br/>
+                <small>ArtShop.com does not sell or buy anything directly. It just provides a platform for artists and art
+                    lovers to communicate. All kinds of buying and selling are done from artists to customer
+                    directly <b>without Artshops involvment.</b>
+                    Artshop.com is <b>not responsible</b> for the sale, packaging, transport or any other aspect related
+                    to the sale of the art piece what so ever.
+                    <br/></small>
+
+                <br/><b>Thank you for using ArtShop.com !</b>
+
+            </div>
+            <div id="processing-order" class="center-align" >
+            <br/>
+            <br/>
+                <h4>Processing your order</h4>
+            <br/>
+                <br/>
+            <b> Please wait</b><br/><br/><br/>
+                <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-green-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer ">
+                <span style="display:none;" id="email" th:text="${#httpServletRequest.remoteUser}"></span>
+<!--                <span style="display:none;" id="artId" th:text="${post.id}"></span>-->
+
+                <a href="#!" id="cancelButton" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                <a href="#!" id="confirmButton" class=" modal-action  waves-effect waves-green btn-flat">OK Confirm Order</a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div th:include="fragments/footer :: mainfooter"></div>
+<script src="/js/imageview.js" th:src="@{/js/imageview.js}"></script>
+</body>
+</html>
