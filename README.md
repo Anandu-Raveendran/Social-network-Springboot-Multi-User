@@ -1,7 +1,5 @@
 # Artshop README #
 
-This is a propriotry code by Anandu. Initially developed for Artshop. Pivoting it for social network.
-
 ### Installation  ###
 
 * Install java, maven, mysql.
